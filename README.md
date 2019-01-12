@@ -1,2 +1,2 @@
 # ProtonBank
-Sistema de banco do Proton Apps
+Sistema bancário do Proton Apps
