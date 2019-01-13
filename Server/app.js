@@ -17,3 +17,4 @@ var adminRoutes = require('./routes/admin.js')
 
 app.use(userRoutes)
 app.use(adminRoutes)
+
