@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
+const mysql = require('mysql')
 
 //short
 //combined
@@ -10,10 +11,9 @@ app.listen(3000, () =>{
     console.log("Server loaded")
 })
 
-app.get("/admin", (req, res) =>{
-    var user = {
-        name: "rodrigo",
-        username: "rodrigmatrix"
-    }
-    res.json(user)
-})
+
+var userRoutes = require('./routes/user.js')
+var adminRoutes = require('./routes/admin.js')
+
+app.use(userRoutes)
+app.use(adminRoutes)
