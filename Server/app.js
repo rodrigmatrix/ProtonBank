@@ -1,20 +1,27 @@
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
-const mysql = require('mysql')
+const cors = require('cors')
 
 //short
 //combined
 app.use(morgan('short'))
+app.use(cors())
 
 app.listen(3000, () =>{
     console.log("Server loaded")
 })
 
 
-var userRoutes = require('./routes/user.js')
-var adminRoutes = require('./routes/admin.js')
+const userRoute = require('./routes/user.js')
+const adminRoute = require('./routes/admin.js')
+const authRoute = require('./routes/auth.js')
+const transactionRoute = require('./routes/transaction.js')
 
-app.use(userRoutes)
-app.use(adminRoutes)
+
+app.use(userRoute)
+app.use(adminRoute)
+app.use(authRoute)
+app.use(transactionRoute)
+
 

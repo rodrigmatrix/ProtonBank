@@ -4,6 +4,8 @@ const mysql = require('mysql')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const md5 = require('js-md5');
+
+
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -107,4 +109,6 @@ user.post('/user_new', (req, res) =>{
         }
     })
 })
+
+
 module.exports = user
