@@ -17,7 +17,11 @@ const userRoute = require('./routes/user.js')
 const adminRoute = require('./routes/admin.js')
 const authRoute = require('./routes/auth.js')
 const transactionRoute = require('./routes/transaction.js')
+const PORT = process.env.PORT || 3003
 
+app.listen(PORT, () =>{
+    console.log("Server Running")
+})
 
 app.use(userRoute)
 app.use(adminRoute)
