@@ -32,16 +32,11 @@ auth.post('/login/admin', (req, res) =>{
             console.log(error)
             res.json({ 
                 status: 500,
-                message: 'Erro no mysql. Verifique o servidor'
+                message: 'Erro no servidor. Verifique sua conexão com a internet'
             })
             res.end()
         }
         else{
-            // var string = JSON.stringify(rows)
-            // console.log("strin "+ string)
-            // var jsonrows = JSON.parse(string)
-            // console.log("row "+ jsonrows[0])
-            // console.log("o id "+jsonrows[0].id)
             if(rows != ''){
                 res.json({ 
                     status: 200,
@@ -51,6 +46,49 @@ auth.post('/login/admin', (req, res) =>{
             }
             else{
                 res.json({ 
+                    status: 400,
+                    message: 'Dados não encontrados'
+                })
+            }
+            
+        }
+        
+    })
+})
+
+auth.post('/login/user', (req, res) =>{
+    const queryUrl = "SELECT * FROM users where account = ? AND password = ?"
+    // send the password in hash
+    console.log(req.body)
+    connection.query(queryUrl,[req.body.account, req.body.password], (error, rows, fields) =>{
+        if(error){
+            console.log(error)
+            res.json({ 
+                status: 500,
+                message: 'Erro no servidor. Verifique sua conexão com a internet'
+            })
+            res.end()
+        }
+        else{
+            if(rows != ''){
+                if(rows[0].error_password == 0){
+                    res.json({ 
+                        status: 400,
+                        message: 'Sua conta se encontra bloqueada no momento. Entre em contato conosco para desbloquear sua conta.'
+                    })
+                }
+                else{
+                    res.json({ 
+                        status: 200,
+                        message: 'Token gerado com sucesso',
+                        token: generateToken(rows[0].id)
+                    })
+                }
+                
+            }
+            else{
+                // TODO UPDATE USER PASSWORD ERROR
+                res.json({
                     status: 400,
                     message: 'Dados não encontrados'
                 })
