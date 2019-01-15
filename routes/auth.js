@@ -86,13 +86,13 @@ auth.post('/login/user', (req, res) =>{
                 else{
                     if(rows2 != ''){
                         if(rows2[0].error_password == 0){
-                            updateErrorPassword(rows[0].id,3)
                             res.json({
                                 status: 400,
                                 message: 'Sua conta se encontra bloqueada no momento. Entre em contato conosco para desbloquear sua conta.'
                             })
                         }
                         else{
+                            updateErrorPassword(rows[0].id,3)
                             res.json({ 
                                 status: 200,
                                 message: 'Token gerado com sucesso',
