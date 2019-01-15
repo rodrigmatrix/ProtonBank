@@ -4,7 +4,7 @@ const mysql = require('mysql')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const md5 = require('js-md5');
-
+const generator = require('creditcard-generator')
 
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -48,9 +48,31 @@ user.get("/api/users/:id", (req, res) =>{
 })
 
 user.post('/api/user_new', (req, res) =>{
-    const user = {
+    var cardNumber
+    switch(req.body.card_brand){
+        case "Mastercard":
+        cardNumber = generator.GenCC("Mastercard", 1)
+
+        case "Visa":
+        cardNumber = generator.GenCC("VISA", 1)
+    }
+
+    var date = new Date()
+    var month = date.getMonth() + 1
+    var monthString
+    var year = date.getFullYear() + 5
+    
+    if(month <= 9 ){
+        monthString = "0" + month
+    }
+    else{
+        console.log("2")
+    }
+
+    var user = {
         name: req.body.name,
         address: req.body.address,
+        birth_date: req.body.birth_date,
         adress_neighborhood: req.body.adress_neighborhood,
         address_number: req.body.address_number,
         info_address: req.body.info_address,
@@ -62,20 +84,20 @@ user.post('/api/user_new', (req, res) =>{
         phone: req.body.phone,
         cpf: req.body.cpf,
         job: req.body.job,
-        password: md5(req.body.password),
-        account: 0001,
-        debit_card_number: req.body.debit_card_number,
-        debit_card_expire: req.body.debit_card_expire,
-        debit_card_cvv: req.body.debit_card_cvv,
-        debit_card_flag: req.body.debit_card_flag
+        password: req.body.password,
+        account: "00010-0",
+        debit_card_number: cardNumber,
+        debit_card_expire: monthString + "/" + year,
+        debit_card_cvv: Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString(),
+        debit_card_flag: req.body.card_brand
     }
-    console.log(req.body)
-    const queryUrl = "INSERT INTO USERS (name,address,adress_neighborhood,adress_number,info_address,zip,email,city,job,state,country,"+
+    const queryUrl = "INSERT INTO USERS (name,address,birth_date,adress_neighborhood,adress_number,info_address,zip,email,city,job,state,country,"+
     "phone,cpf,password,account,debit_card_number,debit_card_expire,debit_card_cvv,debit_card_flag)" + 
-    " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
+    " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
     connection.query(queryUrl, [
         user.name,
         user.address,
+        user.birth_date,
         user.adress_neighborhood,
         user.address_number,
         user.info_address,
@@ -110,5 +132,21 @@ user.post('/api/user_new', (req, res) =>{
     })
 })
 
+
+function updateErrorPassword(userID,wrong){
+    var queryUrl = "UPDATE user SET error_password = ? where id = ?"
+    connection.query(queryUrl,[wrong--,userID], (error,result,fields) =>{
+        if(error){
+            console.log(error)
+            res.json({ 
+                status: 400,
+                message: 'Erro ao atualizar tentativas de senha'
+            })
+        }
+        else{
+            res.end()
+        }
+    })
+}
 
 module.exports = user
