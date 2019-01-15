@@ -61,7 +61,7 @@ user.post('/api/user_new', (req, res) =>{
     var month = date.getMonth() + 1
     var monthString
     var year = date.getFullYear() + 5
-    
+
     if(month <= 9 ){
         monthString = "0" + month
     }
@@ -85,7 +85,7 @@ user.post('/api/user_new', (req, res) =>{
         cpf: req.body.cpf,
         job: req.body.job,
         password: req.body.password,
-        account: "00010-0",
+        account: "00001-1",
         debit_card_number: cardNumber,
         debit_card_expire: monthString + "/" + year,
         debit_card_cvv: Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString(),
@@ -133,20 +133,6 @@ user.post('/api/user_new', (req, res) =>{
 })
 
 
-function updateErrorPassword(userID,wrong){
-    var queryUrl = "UPDATE user SET error_password = ? where id = ?"
-    connection.query(queryUrl,[wrong--,userID], (error,result,fields) =>{
-        if(error){
-            console.log(error)
-            res.json({ 
-                status: 400,
-                message: 'Erro ao atualizar tentativas de senha'
-            })
-        }
-        else{
-            res.end()
-        }
-    })
-}
+
 
 module.exports = user
