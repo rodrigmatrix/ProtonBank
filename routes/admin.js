@@ -16,7 +16,7 @@ const connection = mysql.createConnection({
 
 
 //get users method
-admin.get("/admin", (req, res) =>{
+admin.get("/api/admin", (req, res) =>{
     connection.query("SELECT * from ADMIN", (error, rows, fields) =>{
         if(error){
             console.log(error)
@@ -31,7 +31,7 @@ admin.get("/admin", (req, res) =>{
 
 
 //get users by id method
-admin.get("/admin/:id", (req, res) =>{
+admin.get("/api/admin/:id", (req, res) =>{
     const queryUrl = "SELECT * from user where id = ?"
     connection.query(queryUrl,[req.params.id], (error, rows, fields) =>{
         if(error){
@@ -47,7 +47,7 @@ admin.get("/admin/:id", (req, res) =>{
 
 
 
-admin.post('/admin_new', (req, res) =>{
+admin.post('/api/admin_new', (req, res) =>{
     const user = {
         name: req.body.name,
         address: req.body.address,

@@ -16,7 +16,7 @@ user.use(morgan('short'))
 user.use(bodyParser.json())
 
 //get user method
-user.get("/users", (req, res) =>{
+user.get("/api/users", (req, res) =>{
 
     connection.query("SELECT * from users", (error, rows, fields) =>{
         if(error){
@@ -32,7 +32,7 @@ user.get("/users", (req, res) =>{
 })
 
 //get user by id method
-user.get("/users/:id", (req, res) =>{
+user.get("/api/users/:id", (req, res) =>{
     const queryUrl = "SELECT * from users where id = ?"
     connection.query(queryUrl,[req.params.id], (error, rows, fields) =>{
         if(error){
@@ -47,7 +47,7 @@ user.get("/users/:id", (req, res) =>{
     })
 })
 
-user.post('/user_new', (req, res) =>{
+user.post('/api/user_new', (req, res) =>{
     const user = {
         name: req.body.name,
         address: req.body.address,

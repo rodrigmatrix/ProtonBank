@@ -12,4 +12,5 @@ const connection = mysql.createConnection({
     user: 'root',
     database: 'protonbank'
 })
- module.exports = transaction
+
+module.exports = transaction
