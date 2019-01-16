@@ -1,0 +1,881 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD5CCEF321EFA9930087224C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CCEF221EFA9930087224C /* AppDelegate.swift */; };
+		FD5CCEF521EFA9930087224C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CCEF421EFA9930087224C /* ViewController.swift */; };
+		FD5CCEF821EFA9930087224C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5CCEF621EFA9930087224C /* Main.storyboard */; };
+		FD5CCEFA21EFA9950087224C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5CCEF921EFA9950087224C /* Assets.xcassets */; };
+		FD5CCEFD21EFA9950087224C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5CCEFB21EFA9950087224C /* LaunchScreen.storyboard */; };
+		FD5CCF0821EFA9950087224C /* protonbankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CCF0721EFA9950087224C /* protonbankTests.swift */; };
+		FD5CCF1321EFA9950087224C /* protonbankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CCF1221EFA9950087224C /* protonbankUITests.swift */; };
+		FD5CCF1821EFA9950087224C /* protonbank WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FD5CCF1721EFA9950087224C /* protonbank WatchKit App.app */; };
+		FD5CCF1E21EFA9950087224C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5CCF1C21EFA9950087224C /* Interface.storyboard */; };
+		FD5CCF2021EFA9960087224C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5CCF1F21EFA9960087224C /* Assets.xcassets */; };
+		FD5CCF2721EFA9960087224C /* protonbank WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FD5CCF2621EFA9960087224C /* protonbank WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FD5CCF2C21EFA9960087224C /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CCF2B21EFA9960087224C /* InterfaceController.swift */; };
+		FD5CCF2E21EFA9960087224C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CCF2D21EFA9960087224C /* ExtensionDelegate.swift */; };
+		FD5CCF3021EFA9960087224C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CCF2F21EFA9960087224C /* NotificationController.swift */; };
+		FD5CCF3221EFA9970087224C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5CCF3121EFA9970087224C /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD5CCF0421EFA9950087224C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD5CCEE721EFA9930087224C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD5CCEEE21EFA9930087224C;
+			remoteInfo = protonbank;
+		};
+		FD5CCF0F21EFA9950087224C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD5CCEE721EFA9930087224C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD5CCEEE21EFA9930087224C;
+			remoteInfo = protonbank;
+		};
+		FD5CCF1921EFA9950087224C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD5CCEE721EFA9930087224C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD5CCF1621EFA9950087224C;
+			remoteInfo = "protonbank WatchKit App";
+		};
+		FD5CCF2821EFA9960087224C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD5CCEE721EFA9930087224C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD5CCF2521EFA9960087224C;
+			remoteInfo = "protonbank WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD5CCF3A21EFA9970087224C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FD5CCF2721EFA9960087224C /* protonbank WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD5CCF3E21EFA9970087224C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FD5CCF1821EFA9950087224C /* protonbank WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FD5CCEEF21EFA9930087224C /* protonbank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = protonbank.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD5CCEF221EFA9930087224C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD5CCEF421EFA9930087224C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD5CCEF721EFA9930087224C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD5CCEF921EFA9950087224C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD5CCEFC21EFA9950087224C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD5CCEFE21EFA9950087224C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD5CCF0321EFA9950087224C /* protonbankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = protonbankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD5CCF0721EFA9950087224C /* protonbankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protonbankTests.swift; sourceTree = "<group>"; };
+		FD5CCF0921EFA9950087224C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD5CCF0E21EFA9950087224C /* protonbankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = protonbankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD5CCF1221EFA9950087224C /* protonbankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protonbankUITests.swift; sourceTree = "<group>"; };
+		FD5CCF1421EFA9950087224C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD5CCF1721EFA9950087224C /* protonbank WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "protonbank WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD5CCF1D21EFA9950087224C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		FD5CCF1F21EFA9960087224C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD5CCF2121EFA9960087224C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD5CCF2621EFA9960087224C /* protonbank WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "protonbank WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD5CCF2B21EFA9960087224C /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		FD5CCF2D21EFA9960087224C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		FD5CCF2F21EFA9960087224C /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		FD5CCF3121EFA9970087224C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD5CCF3321EFA9970087224C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD5CCF3421EFA9970087224C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		FD5CCF4821EFAA2F0087224C /* protonbank.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = protonbank.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD5CCEEC21EFA9930087224C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD5CCF0021EFA9950087224C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD5CCF0B21EFA9950087224C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD5CCF2321EFA9960087224C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD5CCEE621EFA9930087224C = {
+			isa = PBXGroup;
+			children = (
+				FD5CCEF121EFA9930087224C /* protonbank */,
+				FD5CCF0621EFA9950087224C /* protonbankTests */,
+				FD5CCF1121EFA9950087224C /* protonbankUITests */,
+				FD5CCF1B21EFA9950087224C /* protonbank WatchKit App */,
+				FD5CCF2A21EFA9960087224C /* protonbank WatchKit Extension */,
+				FD5CCEF021EFA9930087224C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD5CCEF021EFA9930087224C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD5CCEEF21EFA9930087224C /* protonbank.app */,
+				FD5CCF0321EFA9950087224C /* protonbankTests.xctest */,
+				FD5CCF0E21EFA9950087224C /* protonbankUITests.xctest */,
+				FD5CCF1721EFA9950087224C /* protonbank WatchKit App.app */,
+				FD5CCF2621EFA9960087224C /* protonbank WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD5CCEF121EFA9930087224C /* protonbank */ = {
+			isa = PBXGroup;
+			children = (
+				FD5CCF4821EFAA2F0087224C /* protonbank.entitlements */,
+				FD5CCEF221EFA9930087224C /* AppDelegate.swift */,
+				FD5CCEF421EFA9930087224C /* ViewController.swift */,
+				FD5CCEF621EFA9930087224C /* Main.storyboard */,
+				FD5CCEF921EFA9950087224C /* Assets.xcassets */,
+				FD5CCEFB21EFA9950087224C /* LaunchScreen.storyboard */,
+				FD5CCEFE21EFA9950087224C /* Info.plist */,
+			);
+			path = protonbank;
+			sourceTree = "<group>";
+		};
+		FD5CCF0621EFA9950087224C /* protonbankTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD5CCF0721EFA9950087224C /* protonbankTests.swift */,
+				FD5CCF0921EFA9950087224C /* Info.plist */,
+			);
+			path = protonbankTests;
+			sourceTree = "<group>";
+		};
+		FD5CCF1121EFA9950087224C /* protonbankUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD5CCF1221EFA9950087224C /* protonbankUITests.swift */,
+				FD5CCF1421EFA9950087224C /* Info.plist */,
+			);
+			path = protonbankUITests;
+			sourceTree = "<group>";
+		};
+		FD5CCF1B21EFA9950087224C /* protonbank WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				FD5CCF1C21EFA9950087224C /* Interface.storyboard */,
+				FD5CCF1F21EFA9960087224C /* Assets.xcassets */,
+				FD5CCF2121EFA9960087224C /* Info.plist */,
+			);
+			path = "protonbank WatchKit App";
+			sourceTree = "<group>";
+		};
+		FD5CCF2A21EFA9960087224C /* protonbank WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FD5CCF2B21EFA9960087224C /* InterfaceController.swift */,
+				FD5CCF2D21EFA9960087224C /* ExtensionDelegate.swift */,
+				FD5CCF2F21EFA9960087224C /* NotificationController.swift */,
+				FD5CCF3121EFA9970087224C /* Assets.xcassets */,
+				FD5CCF3321EFA9970087224C /* Info.plist */,
+				FD5CCF3421EFA9970087224C /* PushNotificationPayload.apns */,
+			);
+			path = "protonbank WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD5CCEEE21EFA9930087224C /* protonbank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD5CCF3F21EFA9970087224C /* Build configuration list for PBXNativeTarget "protonbank" */;
+			buildPhases = (
+				FD5CCEEB21EFA9930087224C /* Sources */,
+				FD5CCEEC21EFA9930087224C /* Frameworks */,
+				FD5CCEED21EFA9930087224C /* Resources */,
+				FD5CCF3E21EFA9970087224C /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD5CCF1A21EFA9950087224C /* PBXTargetDependency */,
+			);
+			name = protonbank;
+			productName = protonbank;
+			productReference = FD5CCEEF21EFA9930087224C /* protonbank.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD5CCF0221EFA9950087224C /* protonbankTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD5CCF4221EFA9970087224C /* Build configuration list for PBXNativeTarget "protonbankTests" */;
+			buildPhases = (
+				FD5CCEFF21EFA9950087224C /* Sources */,
+				FD5CCF0021EFA9950087224C /* Frameworks */,
+				FD5CCF0121EFA9950087224C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD5CCF0521EFA9950087224C /* PBXTargetDependency */,
+			);
+			name = protonbankTests;
+			productName = protonbankTests;
+			productReference = FD5CCF0321EFA9950087224C /* protonbankTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD5CCF0D21EFA9950087224C /* protonbankUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD5CCF4521EFA9970087224C /* Build configuration list for PBXNativeTarget "protonbankUITests" */;
+			buildPhases = (
+				FD5CCF0A21EFA9950087224C /* Sources */,
+				FD5CCF0B21EFA9950087224C /* Frameworks */,
+				FD5CCF0C21EFA9950087224C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD5CCF1021EFA9950087224C /* PBXTargetDependency */,
+			);
+			name = protonbankUITests;
+			productName = protonbankUITests;
+			productReference = FD5CCF0E21EFA9950087224C /* protonbankUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		FD5CCF1621EFA9950087224C /* protonbank WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD5CCF3B21EFA9970087224C /* Build configuration list for PBXNativeTarget "protonbank WatchKit App" */;
+			buildPhases = (
+				FD5CCF1521EFA9950087224C /* Resources */,
+				FD5CCF3A21EFA9970087224C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD5CCF2921EFA9960087224C /* PBXTargetDependency */,
+			);
+			name = "protonbank WatchKit App";
+			productName = "protonbank WatchKit App";
+			productReference = FD5CCF1721EFA9950087224C /* protonbank WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		FD5CCF2521EFA9960087224C /* protonbank WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD5CCF3721EFA9970087224C /* Build configuration list for PBXNativeTarget "protonbank WatchKit Extension" */;
+			buildPhases = (
+				FD5CCF2221EFA9960087224C /* Sources */,
+				FD5CCF2321EFA9960087224C /* Frameworks */,
+				FD5CCF2421EFA9960087224C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "protonbank WatchKit Extension";
+			productName = "protonbank WatchKit Extension";
+			productReference = FD5CCF2621EFA9960087224C /* protonbank WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD5CCEE721EFA9930087224C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Rodrigo Gomes";
+				TargetAttributes = {
+					FD5CCEEE21EFA9930087224C = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+						};
+					};
+					FD5CCF0221EFA9950087224C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = FD5CCEEE21EFA9930087224C;
+					};
+					FD5CCF0D21EFA9950087224C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = FD5CCEEE21EFA9930087224C;
+					};
+					FD5CCF1621EFA9950087224C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					FD5CCF2521EFA9960087224C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = FD5CCEEA21EFA9930087224C /* Build configuration list for PBXProject "protonbank" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD5CCEE621EFA9930087224C;
+			productRefGroup = FD5CCEF021EFA9930087224C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD5CCEEE21EFA9930087224C /* protonbank */,
+				FD5CCF0221EFA9950087224C /* protonbankTests */,
+				FD5CCF0D21EFA9950087224C /* protonbankUITests */,
+				FD5CCF1621EFA9950087224C /* protonbank WatchKit App */,
+				FD5CCF2521EFA9960087224C /* protonbank WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD5CCEED21EFA9930087224C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD5CCEFD21EFA9950087224C /* LaunchScreen.storyboard in Resources */,
+				FD5CCEFA21EFA9950087224C /* Assets.xcassets in Resources */,
+				FD5CCEF821EFA9930087224C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD5CCF0121EFA9950087224C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD5CCF0C21EFA9950087224C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD5CCF1521EFA9950087224C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD5CCF2021EFA9960087224C /* Assets.xcassets in Resources */,
+				FD5CCF1E21EFA9950087224C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD5CCF2421EFA9960087224C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD5CCF3221EFA9970087224C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD5CCEEB21EFA9930087224C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD5CCEF521EFA9930087224C /* ViewController.swift in Sources */,
+				FD5CCEF321EFA9930087224C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD5CCEFF21EFA9950087224C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD5CCF0821EFA9950087224C /* protonbankTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD5CCF0A21EFA9950087224C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD5CCF1321EFA9950087224C /* protonbankUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD5CCF2221EFA9960087224C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD5CCF3021EFA9960087224C /* NotificationController.swift in Sources */,
+				FD5CCF2E21EFA9960087224C /* ExtensionDelegate.swift in Sources */,
+				FD5CCF2C21EFA9960087224C /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD5CCF0521EFA9950087224C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD5CCEEE21EFA9930087224C /* protonbank */;
+			targetProxy = FD5CCF0421EFA9950087224C /* PBXContainerItemProxy */;
+		};
+		FD5CCF1021EFA9950087224C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD5CCEEE21EFA9930087224C /* protonbank */;
+			targetProxy = FD5CCF0F21EFA9950087224C /* PBXContainerItemProxy */;
+		};
+		FD5CCF1A21EFA9950087224C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD5CCF1621EFA9950087224C /* protonbank WatchKit App */;
+			targetProxy = FD5CCF1921EFA9950087224C /* PBXContainerItemProxy */;
+		};
+		FD5CCF2921EFA9960087224C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD5CCF2521EFA9960087224C /* protonbank WatchKit Extension */;
+			targetProxy = FD5CCF2821EFA9960087224C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD5CCEF621EFA9930087224C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD5CCEF721EFA9930087224C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD5CCEFB21EFA9950087224C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD5CCEFC21EFA9950087224C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FD5CCF1C21EFA9950087224C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD5CCF1D21EFA9950087224C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD5CCF3521EFA9970087224C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD5CCF3621EFA9970087224C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD5CCF3821EFA9970087224C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUZ8LRU967;
+				INFOPLIST_FILE = "protonbank WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.protonapps.protonbank.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		FD5CCF3921EFA9970087224C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUZ8LRU967;
+				INFOPLIST_FILE = "protonbank WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.protonapps.protonbank.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		FD5CCF3C21EFA9970087224C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUZ8LRU967;
+				IBSC_MODULE = protonbank_WatchKit_Extension;
+				INFOPLIST_FILE = "protonbank WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.protonapps.protonbank.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		FD5CCF3D21EFA9970087224C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUZ8LRU967;
+				IBSC_MODULE = protonbank_WatchKit_Extension;
+				INFOPLIST_FILE = "protonbank WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.protonapps.protonbank.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		FD5CCF4021EFA9970087224C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = protonbank/protonbank.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUZ8LRU967;
+				INFOPLIST_FILE = protonbank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.protonapps.protonbank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FD5CCF4121EFA9970087224C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = protonbank/protonbank.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUZ8LRU967;
+				INFOPLIST_FILE = protonbank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.protonapps.protonbank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		FD5CCF4321EFA9970087224C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUZ8LRU967;
+				INFOPLIST_FILE = protonbankTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.protonapps.protonbankTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/protonbank.app/protonbank";
+			};
+			name = Debug;
+		};
+		FD5CCF4421EFA9970087224C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUZ8LRU967;
+				INFOPLIST_FILE = protonbankTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.protonapps.protonbankTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/protonbank.app/protonbank";
+			};
+			name = Release;
+		};
+		FD5CCF4621EFA9970087224C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUZ8LRU967;
+				INFOPLIST_FILE = protonbankUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.protonapps.protonbankUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = protonbank;
+			};
+			name = Debug;
+		};
+		FD5CCF4721EFA9970087224C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUZ8LRU967;
+				INFOPLIST_FILE = protonbankUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.protonapps.protonbankUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = protonbank;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD5CCEEA21EFA9930087224C /* Build configuration list for PBXProject "protonbank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD5CCF3521EFA9970087224C /* Debug */,
+				FD5CCF3621EFA9970087224C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD5CCF3721EFA9970087224C /* Build configuration list for PBXNativeTarget "protonbank WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD5CCF3821EFA9970087224C /* Debug */,
+				FD5CCF3921EFA9970087224C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD5CCF3B21EFA9970087224C /* Build configuration list for PBXNativeTarget "protonbank WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD5CCF3C21EFA9970087224C /* Debug */,
+				FD5CCF3D21EFA9970087224C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD5CCF3F21EFA9970087224C /* Build configuration list for PBXNativeTarget "protonbank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD5CCF4021EFA9970087224C /* Debug */,
+				FD5CCF4121EFA9970087224C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD5CCF4221EFA9970087224C /* Build configuration list for PBXNativeTarget "protonbankTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD5CCF4321EFA9970087224C /* Debug */,
+				FD5CCF4421EFA9970087224C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD5CCF4521EFA9970087224C /* Build configuration list for PBXNativeTarget "protonbankUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD5CCF4621EFA9970087224C /* Debug */,
+				FD5CCF4721EFA9970087224C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD5CCEE721EFA9930087224C /* Project object */;
+}
