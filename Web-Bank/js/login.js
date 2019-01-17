@@ -12,7 +12,7 @@ async function login(){
         headers: new Headers({
           'Content-Type': 'application/json'
         })
-      }
+    }
       await fetch('http://localhost:3000/login/admin', options)
         .then(res => res.json())
         .then(response => jsonresponse = response)

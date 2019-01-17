@@ -47,6 +47,11 @@ user.get("/api/users/:id", (req, res) =>{
     })
 })
 
+function generateAccountNumber(){
+    return (Math.floor(Math.random()*10).toString()+Math.floor(Math.random()*10).toString()+Math.floor(Math.random()*10).toString()+Math.floor(Math.random()*10).toString()
+    +Math.floor(Math.random()*10).toString()+"-"+Math.floor(Math.random()*10).toString())
+}
+
 user.post('/api/user_new', (req, res) =>{
     var cardNumber
     switch(req.body.card_brand){
@@ -66,10 +71,10 @@ user.post('/api/user_new', (req, res) =>{
         monthString = "0" + month
     }
     else{
-        console.log("2")
+        monthString = month
     }
 
-    var user = {
+    let user = {
         name: req.body.name,
         address: req.body.address,
         birth_date: req.body.birth_date,
@@ -85,15 +90,35 @@ user.post('/api/user_new', (req, res) =>{
         cpf: req.body.cpf,
         job: req.body.job,
         password: req.body.password,
-        account: "00001-1",
+        account: generateAccountNumber(),
+        account_plan: req.body.account_plan,
         debit_card_number: cardNumber,
         debit_card_expire: monthString + "/" + year,
         debit_card_cvv: Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString(),
         debit_card_flag: req.body.card_brand
     }
+    //duplicate cpf
+    const findCpf = "SELECT * from users where cpf = ?"
+    connection.query(findCpf, user.cpf, (error, rows, fields) =>{
+        if(error){
+            res.json({
+                status: 400
+            })
+        }
+        else{
+            if(rows != ''){
+                res.json({
+                    status: 404,
+                    message: 'Este cliente já tem cadastro'
+                })
+                return
+            }
+        }
+    })
+
     const queryUrl = "INSERT INTO USERS (name,address,birth_date,adress_neighborhood,adress_number,info_address,zip,email,city,job,state,country,"+
-    "phone,cpf,password,account,debit_card_number,debit_card_expire,debit_card_cvv,debit_card_flag)" + 
-    " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
+    "phone,cpf,password,account,account_plan,debit_card_number,debit_card_expire,debit_card_cvv,debit_card_flag)" + 
+    " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
     connection.query(queryUrl, [
         user.name,
         user.address,
@@ -111,6 +136,7 @@ user.post('/api/user_new', (req, res) =>{
         user.cpf,
         user.password,
         user.account,
+        user.account_plan,
         user.debit_card_number,
         user.debit_card_expire,
         user.debit_card_cvv,
@@ -120,13 +146,16 @@ user.post('/api/user_new', (req, res) =>{
             console.log(error)
             res.json({ 
                 status: 400,
-                message: 'Erro ao cadastrar cliente. Verifique os dados'
+                message: 'Erro ao cadastrar cliente. Verifique se todos os campos foram preenchidos.'
             })
         }
         else{
             res.json({ 
                 status: 200,
-                message: 'Cliente cadastrado com sucesso!'
+                message: 'Cliente cadastrado com sucesso!',
+                name: user.name,
+                account: user.account,
+                account_plan: user.account_plan
             })
         }
     })
