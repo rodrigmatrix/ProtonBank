@@ -17,34 +17,51 @@ user.use(bodyParser.json())
 
 //get user method
 user.get("/api/users", (req, res) =>{
-
-    connection.query("SELECT * from users", (error, rows, fields) =>{
-        if(error){
-            console.log(error)
-            res.sendStatus(500)
-            res.end()
-        }
-        else{
-            res.json(rows)
-        }
-        
-    })
+    if(req.body.token == null){
+        res.json({
+            status: 405,
+            message: 'Não autorizado'
+        })
+    }
+    else{
+        connection.query("SELECT * from users", (error, rows, fields) =>{
+            if(error){
+                console.log(error)
+                res.sendStatus(500)
+                res.end()
+            }
+            else{
+                res.json(rows)
+            }
+            
+        })
+    }
+    
 })
 
 //get user by id method
 user.get("/api/users/:id", (req, res) =>{
     const queryUrl = "SELECT * from users where id = ?"
-    connection.query(queryUrl,[req.params.id], (error, rows, fields) =>{
-        if(error){
-            console.log(error)
-            res.sendStatus(500)
-            res.end()
-        }
-        else{
-            res.json(rows)
-        }
-        
-    })
+    if(req.body.token == null){
+        res.json({
+            status: 405,
+            message: 'Não autorizado'
+        })
+    }
+    else{
+        connection.query(queryUrl,[req.params.id], (error, rows, fields) =>{
+            if(error){
+                console.log(error)
+                res.sendStatus(500)
+                res.end()
+            }
+            else{
+                res.json(rows)
+            }
+            
+        })
+    }
+    
 })
 
 function generateAccountNumber(){

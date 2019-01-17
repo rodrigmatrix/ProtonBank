@@ -17,32 +17,52 @@ const connection = mysql.createConnection({
 
 //get users method
 admin.get("/api/admin", (req, res) =>{
-    connection.query("SELECT * from ADMIN", (error, rows, fields) =>{
-        if(error){
-            console.log(error)
-            res.sendStatus(500)
-            res.end()
-        }
-        else{
-            res.json(rows)
-        }
-    })
+    // verify token
+    if(req.body.token == null){
+        res.json({
+            status: 405,
+            message: 'Não autorizado'
+        })
+    }
+    else{
+        connection.query("SELECT * from ADMIN", (error, rows, fields) =>{
+            if(error){
+                console.log(error)
+                res.sendStatus(500)
+                res.end()
+            }
+            else{
+                res.json(rows)
+            }
+        })
+    }
+    
 })
 
 
 //get users by id method
 admin.get("/api/admin/:id", (req, res) =>{
-    const queryUrl = "SELECT * from user where id = ?"
-    connection.query(queryUrl,[req.params.id], (error, rows, fields) =>{
-        if(error){
-            console.log(error)
-            res.sendStatus(500)
-            res.end()
-        }
-        else{
-            res.json(rows)
-        }
-    })
+    // verify token
+    if(req.body.token == null){
+        res.json({
+            status: 405,
+            message: 'Não autorizado'
+        })
+    }
+    else{
+        const queryUrl = "SELECT * from user where id = ?"
+        connection.query(queryUrl,[req.params.id], (error, rows, fields) =>{
+            if(error){
+                console.log(error)
+                res.sendStatus(500)
+                res.end()
+            }
+            else{
+                res.json(rows)
+            }
+        })
+    }
+    
 })
 
 

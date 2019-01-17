@@ -14,11 +14,13 @@ const connection = mysql.createConnection({
     database: 'protonbank'
 })
 
-function generateToken(userID){
+function generateToken(userID,name){
     let expirationDate = Math.floor(Date.now() /100) + 3
     var token = jwt.sign({
         exp: expirationDate,
+        name: name,   
         sub: userID}, `userID`)
+        
     return token
 }
 
@@ -96,7 +98,7 @@ auth.post('/login/user', (req, res) =>{
                             res.json({ 
                                 status: 200,
                                 message: 'Token gerado com sucesso',
-                                token: generateToken(rows2[0].id)
+                                token: generateToken(rows2[0].id,rows2[0],name)
                             })
                         }
                     }

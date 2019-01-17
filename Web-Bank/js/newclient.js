@@ -71,8 +71,8 @@ async function createAccount(){
                     <large>Plano: ${jsonresponse.account_plan}</large>
                 </div>
                 <div class="text-center">
-                    <button type="button" onclick="printAccount()" class="btn btn-warning my-4">Voltar para dashboard</button>
-                    <button type="button" onclick="backDashboard()" class="btn btn-warning my-4">Imprimir dados para cliente</button>
+                    <button type="button" onclick="backDashboard()" class="btn btn-warning my-4">Voltar para dashboard</button>
+                    <button type="button" onclick="printAccount()" class="btn btn-warning my-4">Imprimir dados para cliente</button>
                 </div>
                 
             </form>
@@ -110,8 +110,12 @@ async function createAccount(){
 
 }
 
-function backDashboard(){
+function printAccount(){
 
+}
+
+function backDashboard(){
+    window.open("dashboard.html", "_self");
 }
 
 function selectPlan(plan){
