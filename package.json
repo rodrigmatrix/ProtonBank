@@ -9,15 +9,15 @@
   "author": "Rodrigo Gomes",
   "license": "Apache-2.0",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "creditcard-generator": "0.0.7",
     "fetch": "^1.1.0",
     "js-md5": "^0.7.3",
-    "jsonwebtoken": "^8.4.0",
+    "jsonwebtoken": "^8.5.1",
     "morgan": "^1.9.1",
-    "mysql": "^2.16.0",
+    "mysql": "^2.17.1",
     "node-cron": "^2.0.3",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.19.1"
   }
 }
